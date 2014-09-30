@@ -1,0 +1,278 @@
+@charset "utf-8";
+
+/***********************************
+		REFERENCES
+font-sizes
+6.854rem
+4.236rem
+2.618rem
+1.618rem
+1rem
+0.618rem
+
+font-families
+Droid Serif, Droid Sans
+
+colors
+#000000
+#222222
+#333333
+#D4D4D4
+#CC3300
+#BADA55
+#FFFFFF
+plus the shadow for the text
+
+
+***********************************/
+
+*{
+	padding:0;
+	margin:0;
+}
+
+/***********************************
+		DEFAULTS
+***********************************/
+body{
+	background-color: #222;
+}
+h1, h2, h3, h4{
+	font-family: "Droid Serif", serif;  /* you need a font stack here */
+    text-shadow: 2px 1px 3px #000000
+}
+h1{
+	/*font-size: 6.854rem;
+    color: #FFFFFF; 
+    text-align: right;
+    float: left;
+    width: 50%; 
+    margin: 0 auto;*/
+    
+}
+h2{
+    
+	
+}
+h3{
+    
+}
+h4{
+	
+}
+p, li, a{
+	font-family: "Droid Sans", sans-serif; /* you need a font stack here */
+    font-size: 1.618rem;
+}
+img{
+	width:90%;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+ul{
+	list-style-type: none;
+    font-size: 1.618rem;
+}
+a:link, a:visited{
+	transition: all 0.8s linear;
+    color: #CC3300;
+}
+a:hover, a:active, a:focus{
+	text-decoration: none;
+    color: #BADA55;
+}
+
+/***********************************
+		LAYOUT
+***********************************/
+.wrapper{
+	width:90%;
+	max-width: 1020px;
+	min-width: 400px;
+	margin:0 auto 2.0rem;
+	background-color: #d4d4d4;
+}
+.header{
+
+	background-color: #000;
+    min-height: 450px;
+}
+.main{
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+	
+}
+.footer{
+	background-color: #333333;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+    
+}
+
+
+
+/***********************************
+		LINKS 
+-for any that are different than the default
+***********************************/
+
+.footer a:link,
+.footer a:visited{
+	display: block;
+    
+	
+}
+.footer a:hover,
+.footer a:active,
+.footer a:focus{
+	
+}
+
+
+/***********************************
+		CONTENT
+***********************************/
+.header h1{
+    position: absolute;
+    margin: 0 auto;
+    padding-left: 15%;
+    text-align: left;
+    color: white;
+    font-size: 6.854rem;
+    width: 35%;
+    font-family: "Droid Serif";
+ 
+}
+
+.header:before{
+    content:url(../img/moon-header.jpg);
+    float: right;
+    
+    
+}
+
+.main h2{
+    font-size: 4.236rem;
+    color: #CC3300;
+    text-shadow: #CC3300;
+    width: 50%;
+    
+    
+	
+}
+.main h3{
+    color: #CC3300;
+    font-size: 2.618rem;
+	
+}
+.main p{
+    font-family: "Droid Sans";
+    line-height: 1.5;
+    color: #333333;
+    padding-top: 10px;
+    padding-bottom: 25px;
+	font-size: 1.618rem;
+}
+.main img{
+	/* use border-radius to crop image */
+	/* choose a width percentage for the image too */
+    border-radius: 60px;
+    width: 30%
+}
+.left{
+	float:left;
+	margin-right:10px;
+	margin-bottom: 10px;
+}
+
+.top-right {
+    width:100%;
+}
+
+ul{
+    width:760px;
+    margin-bottom:20px;
+    overflow:hidden;
+    padding-top: 2rem;
+    padding-left: 4rem;
+}
+
+
+
+.footer p{
+    
+    
+}
+.footer li{
+/* make these 50% the width of the footer */
+   line-height:2em;
+    float: left;
+    display:block;
+    width: 50%;
+    border-color: #CC3300;
+}
+
+@media all and (max-width: 800px) and (min-width: 600px){
+    
+    h1{
+        font-size: 6rem;
+        color:#FFFFFF;
+    }
+    
+    .header{
+        min-height: 300px;
+        background-size: 850px;
+    }
+}
+
+@media all and (max-width: 600px) and (min-width: 500px){
+    
+    h1{
+        font-size: 5rem;
+	    color:#FFFFFF;
+    }
+    
+    .header{
+        min-height: 200px;
+        background-size: 690px;
+    }
+}
+
+@media all and (max-width: 500px) and (min-width: 100px){
+    
+    h1{
+        font-size: 4.236rem;
+        text-align: center;
+	    color:#FFFFFF;
+    }
+    
+    .header{
+        min-height: 200px;
+        background-image: none;
+    }
+    .header h1{
+    padding-left: 45px;
+    width: 310px;
+    }
+    .main h2{
+        font-size: 3rem;
+        width: 400px;
+        padding-top: 10px;
+    }
+    .main h3{
+        font-size: 2rem;
+    }
+    p, li, a{
+        font-family: "Droid Sans", sans-serif; /* you need a font stack here */
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size:  0.9rem;
+    }
+    .footer p{
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
